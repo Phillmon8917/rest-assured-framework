@@ -1,0 +1,5 @@
+firstname;lastname;totalprice;depositpaid;bookingdates;bookingdate;additionalneeds;Execute
+Phillimon;Motsinoni;300;FALSE;2025-06-10;2025-06-15;None;Y
+Peter;Dumb;280;TRUE;2025-06-11;2025-06-16;Bed and food;Y
+Mathew;John;200;FALSE;2025-06-12;2025-06-17;None;Y
+Ash;Gecko;350;TRUE;2025-06-13;2025-06-18;None;Y
