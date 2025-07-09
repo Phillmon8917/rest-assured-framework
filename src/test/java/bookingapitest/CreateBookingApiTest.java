@@ -23,6 +23,7 @@ public class CreateBookingApiTest {
     public void createABookingAndValidateStatusCode() {
         Map<String, Object> createRequestPayload = ApiRequestHelper.getCreateBookingPayload("Phill",
                 "Motsinoni", 255.65,true ,"2025-06-15", "2025-07-15");
+
         createBookingApi.createNewBooking(createRequestPayload)
                 .then().assertThat().statusCode(200)
                 .and().body("bookingid", is(not(equalTo(0))));

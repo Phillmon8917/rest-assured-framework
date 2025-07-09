@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extentreports>
+    <configuration>
+        <theme>STANDARD</theme>
+        <encoding>UTF-8</encoding>
+        <protocol>HTTPS</protocol>
+        <timelineEnabled>false</timelineEnabled>
+        <showPassPercent>true</showPassPercent>
+        <passPercentDecimalPlaces>2</passPercentDecimalPlaces>
+        <enableOfflineMode>false</enableOfflineMode>
+        <thumbnailForBase64>false</thumbnailForBase64>
+
+        <documentTitle>Extent Framework</documentTitle>
+
+        <reportName><![CDATA[
+      <div style="display:flex; justify-content:space-between; align-items:center; padding:0.5rem;">
+        <img src="https://app.technoempower.com/img/SiteAdmin$Image_collection_other$technocenterlogo_Croppedpng.png?637737281052719100" alt="Logo" style="height:45px"/>
+        <button id="themeToggleBtn" style="padding:0.25rem 1rem; cursor:pointer; border:none; border-radius:4px; background:#007bff; color:#fff; font-weight:bold;">Toggle Theme</button>
+      </div>
+    ]]></reportName>
+
+        <timeStampFormat>MMM dd, yyyy HH:mm:ss</timeStampFormat>
+
+        <styles><![CDATA[
+      :root {
+        --bg-color-light: #ffffff;
+        --text-color-light: #222222;
+        --card-bg-light: #f9f9f9;
+        --pass-color: #28a745;
+        --fail-color: #dc3545;
+
+        --bg-color-dark: #121212;
+        --text-color-dark: #e0e0e0;
+        --card-bg-dark: #1f1f1f;
+      }
+
+      body {
+        background-color: var(--bg-color-light);
+        color: var(--text-color-light);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      body.dark-theme {
+        background-color: var(--bg-color-dark);
+        color: var(--text-color-dark);
+      }
+
+      .report-card {
+        background-color: var(--card-bg-light);
+        padding: 1rem;
+        margin-bottom: 1rem;
+        border-radius: 6px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        transition: background-color 0.3s ease;
+      }
+
+      body.dark-theme .report-card {
+        background-color: var(--card-bg-dark);
+        box-shadow: 0 2px 6px rgba(0,0,0,0.5);
+      }
+
+      .status.pass {
+        color: var(--pass-color);
+        font-weight: bold;
+      }
+
+      .status.fail {
+        color: var(--fail-color);
+        font-weight: bold;
+      }
+
+      /* Style the toggle button */
+      #themeToggleBtn {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        transition: background-color 0.3s ease;
+      }
+
+      #themeToggleBtn:hover {
+        background-color: #0056b3;
+      }
+    ]]></styles>
+
+        <scripts><![CDATA[
+      (function() {
+        const btn = document.getElementById('themeToggleBtn');
+        if (!btn) return;
+
+        // Load saved theme preference
+        const savedTheme = localStorage.getItem('extentReportTheme');
+        if (savedTheme === 'dark') {
+          document.body.classList.add('dark-theme');
+        }
+
+        btn.addEventListener('click', function() {
+          document.body.classList.toggle('dark-theme');
+          const isDark = document.body.classList.contains('dark-theme');
+          localStorage.setItem('extentReportTheme', isDark ? 'dark' : 'light');
+        });
+      })();
+    ]]></scripts>
+
+        <view>
+            <showPassPercent>true</showPassPercent>
+            <passPercentDecimalPlaces>2</passPercentDecimalPlaces>
+        </view>
+    </configuration>
+</extentreports>

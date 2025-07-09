@@ -7,8 +7,8 @@ import java.time.format.DateTimeFormatter;
 
 public class LoggingUtil {
     public static void log(String className, String methodName, String exception){
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd_HHmmss");
-        String fileName = "Log" + LocalDateTime.now().format(formatter);
+
+        String fileName = "Log" + UniqueNamingUtil.getUniqueName();
         try {
             File file = new File("src/main/java/logs/" + fileName + ".txt");
 

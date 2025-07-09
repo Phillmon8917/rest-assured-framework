@@ -1,6 +1,8 @@
 package bookingapitest;
 
 import api.UpdateBookingApi;
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import config.PropertyUtil;
 import dataloader.BookingDataLoader;
 import email.EmailSender;
@@ -10,6 +12,8 @@ import objects.BookingResponse;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import util.ApiRequestHelper;
+import util.ExtentReportManager;
+
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 
@@ -28,6 +32,12 @@ public class UpdateBookingApiTest {
     @Test
     public void updateBookingApiAndValidateStatusCodeOnly() throws Exception{
         List<BookingRequest> bookingRequestData = BookingDataLoader.loadData(PropertyUtil.getConfig().bookingApiTestData());
+        ExtentReports reports = ExtentReportManager.getExtentReporter("BookingApi");
+
+        for (BookingRequest request : bookingRequestData){
+
+        }
+
         int i = 79;
         for (BookingRequest bookingRequest : bookingRequestData){
             //i += 10;

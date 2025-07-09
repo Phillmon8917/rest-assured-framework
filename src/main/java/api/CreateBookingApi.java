@@ -1,5 +1,7 @@
 package api;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import constants.BookingApiPaths;
 import http.BaseApi;
 import io.restassured.filter.log.LogDetail;
@@ -10,6 +12,9 @@ import objects.BookingRequest;
 import java.util.Map;
 
 public class CreateBookingApi extends BaseApi {
+
+
+    ExtentTest extentTest;
 
     public CreateBookingApi(){
         super();
