@@ -1,5 +1,0 @@
-Exception details: 
-
-Class Name: Test
-Method name: main
-Exception: java.lang.ArithmeticException: / by zero

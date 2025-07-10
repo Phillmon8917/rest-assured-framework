@@ -1,5 +1,0 @@
-Exception details: 
-
-Class Name: EmailSender
-Method name: sendEmailWithAttachments
-Exception: java.lang.IllegalStateException: No provider of jakarta.mail.util.StreamProvider was found

@@ -1,0 +1,5 @@
+Exception details: 
+
+Class Name: BookingDataLoader
+Method name: loadData
+Exception: java.text.ParseException: Unparseable date: "10/06/2025"

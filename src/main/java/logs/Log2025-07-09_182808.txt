@@ -1,0 +1,5 @@
+Exception details: 
+
+Class Name: ExtentReportManager
+Method name: getExtentReporter
+Exception: java.lang.IllegalArgumentException: InputStream cannot be null

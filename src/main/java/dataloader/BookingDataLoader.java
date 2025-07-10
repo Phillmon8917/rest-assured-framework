@@ -15,7 +15,7 @@ public class BookingDataLoader {
 
     public static List<BookingRequest> loadData(String csvFilePath) {
         List<BookingRequest> bookings = new ArrayList<>();
-        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
 
         try (BufferedReader br = new BufferedReader(new FileReader(csvFilePath))) {
             String line;

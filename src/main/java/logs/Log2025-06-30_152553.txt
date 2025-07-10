@@ -1,5 +1,0 @@
-Exception details: 
-
-Class Name: EmailSender
-Method name: sendEmailWithAttachments
-Exception: java.lang.ClassCastException: class com.sun.mail.handlers.text_plain cannot be cast to class jakarta.activation.DataContentHandler (com.sun.mail.handlers.text_plain and jakarta.activation.DataContentHandler are in unnamed module of loader 'app')
