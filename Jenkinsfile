@@ -26,7 +26,7 @@ pipeline{
                      //  usernameVariable: "BOOKER_USERNAME",  //name matches exactly in the code
                      //  passwordVariable: 'BOOKER_PASSWORD')]) //password matches exactly in the code
                      //{
-                       sh "mvn test -Pregression"
+                       sh "mvn test -P${profile}"
                     // } Tests run inside the credentials to bind the environmental variables with it.
 
                    }
